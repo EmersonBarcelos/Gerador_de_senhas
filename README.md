@@ -7,4 +7,4 @@ Bibliotecas utilizadas:
     <span style="font-weight: 400">pyperclip - FUNÇÃO COPIAR</span>
     <span style="font-weight: 400">ramdom - EMBARALHAR CARACTERES</span>
 </pre>    
-App pode gerar senhas em diversos tamanhos
+O app pode gerar senhas em diversos tamanhos
