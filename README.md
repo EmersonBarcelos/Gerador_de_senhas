@@ -2,6 +2,6 @@
 Gerador de senhas com interface feita com Tkinter
 
 Bibliotecas utilizadas:
-<div>
-  <span>pip install tkinter</span>
-</div>
+<pre>
+    <span style="font-weight: 400">cd Pos_Install_SO/</span>
+</pre>    
