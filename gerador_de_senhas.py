@@ -5,13 +5,14 @@ import random
 root = Tk()
 root.title("Gerador de senhas")
 root['background']='white'
-root.geometry("450x200")
+root.geometry("450x210")
 passstr = StringVar()
 passlen = IntVar()
 passlen.set(0)
 
 def gerar():
-    pass1 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+    try:
+        pass1 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
              'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç',
              'z', 'x', 'c', 'v', 'b', 'n', 'm', 'Q', 'W', 'E',
              'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D',
@@ -19,11 +20,16 @@ def gerar():
              'V', 'B', 'N', 'M', '1', '2', '3', '4', '5', '6',
              '7', '8', '9', '!', '@', '#', '$', '%', '&', '*',
              '(', ')', '+', '-']
-    senha = ""
-    for x in range(passlen.get()):
-        senha = senha + random.choice(pass1)         
-    passstr.set(senha)
-
+        senha = ""
+        for x in range(passlen.get()):
+            senha = senha + random.choice(pass1)         
+            passstr.set(senha)
+    except:
+        root2 = Tk()
+        root2.title("ERRO!")
+        root2['background']='white'
+        root2.geometry("250x50")
+        Label(root2, text= "INSIRA UM TAMANHO VALIDO!", bg="red").pack()
 def copiarclipboard():
     random_senha = passstr.get()
     pyperclip.copy(random_senha)
